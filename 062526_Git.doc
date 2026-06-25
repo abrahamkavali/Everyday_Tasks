@@ -1,0 +1,223 @@
+
+Git
+
+Git is a Version Control System (VCS).
+It is used to track changes in source code and allows multiple developers to work on the same project.
+
+GitHub
+
+GitHub is a remote hosting service for Git repositories.
+
+Git stores code locally, whereas GitHub stores it online.
+
+Git Architecture
+
+Working Directory
+↓ (git add)
+Staging Area
+↓ (git commit)
+Local Repository
+↓ (git push)
+Remote Repository (GitHub)
+
+Working Directory
+
+* Files are created or modified here.
+* New files are called Untracked files until they are added.
+
+Staging Area
+
+* Temporary area before committing.
+* Files are prepared for the next commit.
+
+Local Repository
+
+* Stores commit history on the local machine.
+
+Remote Repository
+
+* Repository hosted on GitHub/Bitbucket.
+* Used for sharing code with others.
+
+Commands
+
+Initialize Git
+
+git init
+
+Initializes the current folder as a Git repository.
+
+Check Status
+
+git status
+
+Displays:
+
+* Untracked files
+* Modified files
+* Staged files
+
+Add Files
+
+Single file
+
+git add file.txt
+
+All files
+
+git add .
+
+Moves files from Working Directory to Staging Area.
+
+Commit
+
+git commit -m "message"
+
+Moves files from Staging Area to Local Repository.
+
+Connect Local Repository to GitHub
+
+git remote add origin <repository-url>
+
+origin is the default name of the remote repository.
+
+Check Remote
+
+git remote -v
+
+Push
+
+First time
+
+git push -u origin main
+
+or
+
+git push -u origin master
+
+After the first push
+
+git push
+
+Moves commits from Local Repository to Remote Repository.
+
+Pull
+
+git pull
+
+Downloads and merges the latest changes from the remote repository.
+
+Fetch
+
+git fetch
+
+Downloads the latest changes but does not merge them into the current branch.
+
+Clone
+
+git clone <repository-url>
+
+Downloads an existing repository from GitHub to the local machine.
+
+Branch Commands
+
+Check current branch
+
+git branch
+
+Create a new branch
+
+git branch dev1
+
+Create and switch to a new branch
+
+git checkout -b dev1
+
+Switch to an existing branch
+
+git checkout dev1
+
+Merge
+
+git merge dev1
+
+Merges the specified branch into the current branch.
+
+Merge Conflict
+
+Occurs when two branches modify the same line of the same file.
+
+Steps to resolve
+
+1. Edit the conflicted file.
+2. Remove the conflict markers.
+3. Save the file.
+4. Stage the file.
+5. Commit the changes.
+
+git add .
+git commit -m "Resolved merge conflict"
+
+Restore Commands
+
+Unstage a file
+
+git restore --staged file.txt
+
+Moves a file from Staging Area back to Working Directory.
+
+Discard local changes
+
+git restore file.txt
+
+Restores the file to its last committed version.
+
+Delete Git Repository
+
+rm -rf .git
+
+Removes Git tracking from the project.
+
+Most Frequently Used Commands
+
+git init
+git status
+git add .
+git commit -m "message"
+git push
+git pull
+git fetch
+git clone <repository-url>
+git branch
+git checkout -b branch_name
+git checkout branch_name
+git merge branch_name
+git restore --staged file.txt
+git restore file.txt
+
+Flow
+
+Create/Edit File
+↓
+Working Directory
+↓ git add
+Staging Area
+↓ git commit
+Local Repository
+↓ git push
+Remote Repository
+
+Shortcut to Remember
+
+git add → Working Directory → Staging Area
+
+git commit → Staging Area → Local Repository
+
+git push → Local Repository → Remote Repository
+
+git pull → Remote Repository → Local Repository + Working Directory
+
+git fetch → Remote Repository → Local Repository (downloads only)
+
+git restore --staged → Staging Area → Working Directory
+
