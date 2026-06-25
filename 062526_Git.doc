@@ -13,11 +13,11 @@ Git stores code locally, whereas GitHub stores it online.
 Git Architecture
 
 Working Directory
-↓ (git add)
+(git add)
 Staging Area
-↓ (git commit)
+(git commit)
 Local Repository
-↓ (git push)
+(git push)
 Remote Repository (GitHub)
 
 Working Directory
@@ -220,4 +220,5 @@ git pull → Remote Repository → Local Repository + Working Directory
 git fetch → Remote Repository → Local Repository (downloads only)
 
 git restore --staged → Staging Area → Working Directory
+
 
