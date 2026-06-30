@@ -1,0 +1,11 @@
+1SELECT
+2    query_name,
+3    ROUND(AVG(rating / position), 2) AS quality,
+4    ROUND(
+5        SUM(CASE WHEN rating < 3 THEN 1 ELSE 0 END) * 100.0 / COUNT(*),
+6        2
+7    ) AS poor_query_percentage
+8FROM
+9    Queries
+10GROUP BY
+11    query_name;
