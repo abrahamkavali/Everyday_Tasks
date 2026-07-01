@@ -222,3 +222,4 @@ git fetch → Remote Repository → Local Repository (downloads only)
 git restore --staged → Staging Area → Working Directory
 
 
+git pull �rebase , pull the changes and keep your local commits
